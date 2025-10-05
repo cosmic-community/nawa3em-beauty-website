@@ -1,4 +1,5 @@
 import { createBucketClient } from '@cosmicjs/sdk'
+import type { Banner, Service, Product, Doctor, FAQ, ServiceCategory, ProductCategory } from '@/types'
 
 export const cosmic = createBucketClient({
   bucketSlug: process.env.COSMIC_BUCKET_SLUG as string,
@@ -11,7 +12,6 @@ function hasStatus(error: unknown): error is { status: number } {
 }
 
 // Helper functions for fetching data
-import type { Banner, Service, Product, Doctor, FAQ, ServiceCategory, ProductCategory } from '@/types'
 
 export async function getBanners(locale: string): Promise<Banner[]> {
   try {
