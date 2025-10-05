@@ -11,7 +11,7 @@ function hasStatus(error: unknown): error is { status: number } {
 }
 
 // Helper functions for fetching data
-import type { Banner, Service, Product, Doctor, FAQ } from '@/types'
+import type { Banner, Service, Product, Doctor, FAQ, ServiceCategory, ProductCategory } from '@/types'
 
 export async function getBanners(locale: string): Promise<Banner[]> {
   try {
